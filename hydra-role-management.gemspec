@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Rails engine to do user roles in an RDBMS for hydra-head}
   gem.homepage      = "https://github.com/projecthydra/hydra-role-management"
 
-  gem.files         = `git ls-files`.split($\)
+  gem.files         = `git ls-files`.split($\) - ['config/i18n-tasks.yml']
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "hydra-role-management"
@@ -24,4 +24,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rspec-its'
   gem.add_development_dependency 'rails-controller-testing', '~> 0'
   gem.add_development_dependency 'engine_cart', '~> 1.0'
+  gem.add_development_dependency 'i18n-tasks'
 end
